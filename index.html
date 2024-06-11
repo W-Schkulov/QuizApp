@@ -10,57 +10,75 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM0sD0+U4FV7I4bZZF60xKIBf8evMkqdlP3RdS1"
+      crossorigin="anonymous"
+    />
     <title>QuizApp</title>
   </head>
   <body>
-    <header>Quiz App</header>
-    <section>
-      <div class="quiz-card">
-        <div class="content">
-          <h2>What property flips the axes in flexbox?</h2>
-          <button>Show Answer</button>
-          <div class="tags">
+    <header role="banner">
+      <h1>Quiz App</h1>
+    </header>
+    <main role="main">
+      <article aria-labelledby="question1" role="article">
+        <ul class="quiz-card" role="list">
+          <li role="listitem">
+            <button class="bookmark" aria-label="Bookmark question"></button>
+          </li>
+          <li role="listitem">
+            <h2 id="question1" role="heading" aria-level="2">
+              What property flips the axes in flexbox?
+            </h2>
+          </li>
+          <li role="listitem">
+            <button
+              aria-label="Show the answer to the question"
+            
+            >
+              Show Answer
+            </button>
+          </li>
+          <li
+            role="listitem"
+            id="answer1"
+            class="answer"
+            hidden
+            aria-hidden="true"
+          >
+            The property that flips the axes in flexbox is
+            <code>flex-direction</code>.
+          </li>
+          <li role="listitem" class="tags">
             <span class="tag">#html</span>
             <span class="tag">#flexbox</span>
             <span class="tag">#css</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="quiz-card">
-        <div class="content">
-          <h2>
-            Which CSS property is used to change the text color of an element?
-          </h2>
-          <button>Show Answer</button>
-          <div class="tags">
-            <span class="tag">#font-color</span>
-            <span class="tag">#text-color</span>
-            <span class="tag">#color</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="quiz-card">
-        <div class="content">
-          <h2>What is the correct way to initialize a new Git repository?</h2>
-          <button>Show Answer</button>
-          <div class="tags">
-            <span class="tag">#git start</span>
-            <span class="tag">#git init</span>
-            <span class="tag">#git create</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#bookmarks">Bookmarks</a></li>
-        <li><a href="#profile">Profile</a></li>
-      </ul>
+          </li>
+        </ul>
+      </article>
+  
+    <footer role="contentinfo">
+      <nav aria-label="Main Navigation">
+        <ul role="list">
+          <li role="listitem">
+            <a href="#home" class="active" aria-label="Home">
+              <i class="fas fa-home" aria-hidden="true"></i> Home
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#bookmarks" aria-label="Bookmarks">
+              <i class="fas fa-bookmark" aria-hidden="true"></i> Bookmarks
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#profile" aria-label="Profile">
+              <i class="fas fa-user" aria-hidden="true"></i> Profile
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
