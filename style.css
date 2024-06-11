@@ -35,3 +35,19 @@ article {
   margin-bottom: 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #666;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+ul li {
+  list-style-type: none;
+}

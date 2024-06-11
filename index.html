@@ -22,60 +22,34 @@
     <header role="banner">
       <h1>Quiz App</h1>
     </header>
-    <main role="main">
-      <article aria-labelledby="question1" role="article">
-        <ul class="quiz-card" role="list">
-          <li role="listitem">
-            <button class="bookmark" aria-label="Bookmark question"></button>
-          </li>
-          <li role="listitem">
-            <h2 id="question1" role="heading" aria-level="2">
-              What property flips the axes in flexbox?
-            </h2>
-          </li>
-          <li role="listitem">
-            <button
-              aria-label="Show the answer to the question"
-            
-            >
-              Show Answer
-            </button>
-          </li>
-          <li
-            role="listitem"
-            id="answer1"
-            class="answer"
-            hidden
-            aria-hidden="true"
-          >
-            The property that flips the axes in flexbox is
-            <code>flex-direction</code>.
-          </li>
-          <li role="listitem" class="tags">
-            <span class="tag">#html</span>
-            <span class="tag">#flexbox</span>
-            <span class="tag">#css</span>
-          </li>
-        </ul>
-      </article>
-  
-    <footer role="contentinfo">
+    <main>
+      <ul class="card-list">
+        <li class="quiz-card">
+          <article aria-labelledby="question1" role="article">
+            <p id="question1">What property flips the axes in flexbox?</p>
+
+            <button>Show Answer</button>
+
+            <ul role="listitem" class="tags">
+              <li class="tag">#html</li>
+              <li class="tag">#flexbox</li>
+              <li class="tag">#css</li>
+            </ul>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <footer>
       <nav aria-label="Main Navigation">
         <ul role="list">
           <li role="listitem">
-            <a href="#home" class="active" aria-label="Home">
-              <i class="fas fa-home" aria-hidden="true"></i> Home
-            </a>
+            <a href="#home" class="active" aria-label="Home">Home </a>
           </li>
           <li role="listitem">
-            <a href="#bookmarks" aria-label="Bookmarks">
-              <i class="fas fa-bookmark" aria-hidden="true"></i> Bookmarks
-            </a>
+            <a href="#bookmarks" aria-label="Bookmarks">Bookmarks </a>
           </li>
           <li role="listitem">
-            <a href="#profile" aria-label="Profile">
-              <i class="fas fa-user" aria-hidden="true"></i> Profile
-            </a>
+            <a href="#profile" aria-label="Profile">Profile </a>
           </li>
         </ul>
       </nav>
