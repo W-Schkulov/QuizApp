@@ -42,5 +42,8 @@ body.light-mode a {
 }
 
 body.light-mode a {
-  color: #007bff;
+  color: #007bff;‚
+}
+body.light-mode button:hover {
+  background-color: #f6f6f6
 }
