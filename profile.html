@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Profile - Quiz App</title>
-    <script src="./JavaScript/index.js" defer></script>
-    <script src="./JavaScript/toggle_mode.js" defer></script>
   </head>
   <body data-js="body">
     <header class="title">
       <h1>Quiz App</h1>
-      <button class="mode-toggle" data-js="mode-toggle">
-        <span class="icon" data-js="mode-icon">🌙</span>
-      </button>
     </header>
     <main class="profile">
       <section class="profile-header">
@@ -28,14 +27,14 @@
     <footer>
       <nav class="navigation">
         <ul class="navigation__list">
-          <li class="list__item">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="list__item">
-            <a href="bookmarks.html">Bookmarks</a>
-          </li>
           <li class="list__item" active>
-            <a href="profile.html">Profile</a>
+            <a href="index.html"><i class="fas fa-home fa-2x"></i></a>
+          </li>
+          <li class="list__item">
+            <a href="#bookmarks"><i class="fas fa-bookmark fa-2x"></i></a>
+          </li>
+          <li class="list__item">
+            <a href="profile.html"><i class="fas fa-user fa-2x"></i></a>
           </li>
         </ul>
       </nav>

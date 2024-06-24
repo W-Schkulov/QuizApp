@@ -10,3 +10,12 @@ document.querySelectorAll(".answer__button").forEach((button) => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const bookmarkButtons = document.querySelectorAll(".card__bookmark");
+
+  bookmarkButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+    });
+  });
+});
