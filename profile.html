@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Profile - Quiz App</title>
+    <script src="./JavaScript/index.js" defer></script>
+    <script src="./JavaScript/toggle_mode.js" defer></script>
+  </head>
+  <body data-js="body">
+    <header class="title">
+      <h1>Quiz App</h1>
+      <button class="mode-toggle" data-js="mode-toggle">
+        <span class="icon" data-js="mode-icon">🌙</span>
+      </button>
+    </header>
+    <main class="profile">
+      <section class="profile-header">
+        <img
+          src="assets/user-avatar.png"
+          alt="User Avatar"
+          class="profile-avatar"
+        />
+        <h2>Wladimir Schkulov</h2>
+      </section>
+      <section class="profile-info">
+        <h3>About me</h3>
+        <p class="about-me-text">
+          I am a passionate web developer with a love for learning new
+          technologies and building creative projects.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="list__item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="list__item">
+            <a href="bookmarks.html">Bookmarks</a>
+          </li>
+          <li class="list__item" active>
+            <a href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
