@@ -1,0 +1,49 @@
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.light-mode header {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode .mode-toggle {
+  color: #333;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .card button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+body.light-mode .card button {
+  background-color: #d0d0d0;
+}
+
+body.light-mode .tag {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode a {
+  color: #333;
+}
+
+body.light-mode a {
+  color: #007bff;‚
+}
+body.light-mode button:hover {
+  background-color: #f6f6f6
+}

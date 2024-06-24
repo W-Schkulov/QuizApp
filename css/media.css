@@ -1,0 +1,25 @@
+@media (min-width 800px) {
+  .card__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    aspect-ratio: 1;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    aspect-ratio: 1;
+    min-height: 300px;
+  }
+}
