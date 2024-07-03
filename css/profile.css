@@ -1,49 +1,112 @@
-main {
-  padding: 20px;
+.profile {
+  padding: 10rem 6rem 8rem 6rem;
+  background-color: #212f45;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-main p {
-  text-align: center;
+
+.profile > * {
+  margin: 0 0 2rem;
+  color: #e0e0e0;
 }
-form ul {
-  list-style: none;
+
+.counter-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
   padding: 0;
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: #162447;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 16px 0;
 }
 
-form ul li {
-  margin-bottom: 16px;
+.counter-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  margin: 16px 0;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
+.counter-list__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: calc(100% - 20px);
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.counter-list__item i {
+  font-size: 24px;
+  color: #e0e0e0;
 }
 
-button {
-  background-color: #162447;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+.counter-list__item span {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.profile__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1a1a2e;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile__card-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.profile__settings {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
 }
 
-button:hover {
-  background-color: #1f4068;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }

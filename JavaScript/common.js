@@ -1,6 +1,7 @@
-document.querySelectorAll(".answer__button").forEach((button) => {
-  button.addEventListener("click", function () {
-    const answer = this.nextElementSibling;
+document.body.addEventListener("click", function (event) {
+  if (event.target.classList.contains("answer__button")) {
+    const button = event.target;
+    const answer = button.nextElementSibling;
     if (answer.style.display === "none" || !answer.style.display) {
       answer.style.display = "block";
       button.textContent = "Hide Answer";
@@ -8,5 +9,5 @@ document.querySelectorAll(".answer__button").forEach((button) => {
       answer.style.display = "none";
       button.textContent = "Show Answer";
     }
-  });
+  }
 });
