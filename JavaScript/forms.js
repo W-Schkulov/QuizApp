@@ -5,9 +5,8 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const formData = new FormData(form);
-  const question = formData.get("question");
-  const answer = formData.get("answer");
-  const tag = formData.get("tag");
+  const formDataEntries = Object.fromEntries(formData.entries());
+  const { question, answer, tag } = formDataEntries;
 
   const newCard = document.createElement("li");
 
@@ -24,6 +23,5 @@ form.addEventListener("submit", function (event) {
       </button>
     </article>
   `;
-
   cardList.appendChild(newCard);
 });

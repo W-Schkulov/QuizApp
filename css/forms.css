@@ -36,6 +36,7 @@ textarea {
 }
 
 .button__submit {
+  margin-top: 12px;
   padding: 10px;
   border: 1px solid #1b263b;
   border-radius: 8px;

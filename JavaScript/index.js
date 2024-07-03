@@ -1,30 +1,33 @@
 //darkmode bzw bei mir lightmode//
 
-const bodyElement = document.querySelector('[data-js="body"]');
-const darkModeSwitch = document.querySelector('[data-js="switch-darkmode"]');
+function LightModeToggle(bodySelector, switchSelector) {
+  const bodyElement = document.querySelector(bodySelector);
+  const darkModeSwitch = document.querySelector(switchSelector);
 
-const isLightMode = localStorage.getItem("lightMode") === "true";
-if (isLightMode) {
-  bodyElement.classList.add("light-mode");
   if (darkModeSwitch) {
-    darkModeSwitch.checked = true;
+    if (darkModeSwitch.checked) {
+      bodyElement.classList.add("light-mode");
+    }
+
+    darkModeSwitch.addEventListener("change", () => {
+      bodyElement.classList.toggle("light-mode", darkModeSwitch.checked);
+    });
   }
 }
 
-if (darkModeSwitch) {
-  darkModeSwitch.addEventListener("change", () => {
-    bodyElement.classList.toggle("light-mode");
-    localStorage.setItem("lightMode", darkModeSwitch.checked);
-  });
-}
+LightModeToggle('[data-js="body"]', '[data-js="switch-darkmode"]');
 
-//AnswerButton //
+//AnswerButton function //
 
-document.body.addEventListener("click", function (event) {
-  if (event.target.classList.contains("answer__button")) {
+function toggleAnswer(event) {
+  const isAnswerButton = event.target.classList.contains("answer__button");
+  if (isAnswerButton) {
     const button = event.target;
     const answer = button.nextElementSibling;
-    if (answer.style.display === "none" || !answer.style.display) {
+    const isAnswerHidden =
+      answer.style.display === "none" || !answer.style.display;
+
+    if (isAnswerHidden) {
       answer.style.display = "block";
       button.textContent = "Hide Answer";
     } else {
@@ -32,13 +35,22 @@ document.body.addEventListener("click", function (event) {
       button.textContent = "Show Answer";
     }
   }
-});
+}
+
+document.body.addEventListener("click", toggleAnswer);
 
 //bookmarks//
-const bookmarkButton1 = document.querySelector(".card__bookmark1");
+function addBookmarkToggleListener(buttonSelector) {
+  const bookmarkButton = document.querySelector(buttonSelector);
 
-bookmarkButton1.addEventListener("click", function () {
-  bookmarkButton1.classList.toggle("active");
-});
+  if (bookmarkButton) {
+    bookmarkButton.addEventListener("click", function () {
+      bookmarkButton.classList.toggle("active");
+    });
+  }
+}
+addBookmarkToggleListener(".card__bookmark1");
+addBookmarkToggleListener(".card__bookmark2");
+addBookmarkToggleListener(".card__bookmark3");
 
 //forms

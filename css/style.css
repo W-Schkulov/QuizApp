@@ -117,7 +117,9 @@ ul li {
   right: 8px;
 }
 
-.card__bookmark1.active {
+.card__bookmark1.active,
+.card__bookmark2.active,
+.card__bookmark3.active {
   color: #f39c12;
 }
 
